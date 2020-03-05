@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# spotify-challenge
 
-## Available Scripts
+**Live Demo:** [http://nicholastaylor.org/spotify-challenge/](http://nicholastaylor.org/spotify-challenge/)
 
-In the project directory, you can run:
+This is a little React app I threw together in response to a task in a Spotify job posting:
+```
+If you want to jumpstart the process of talking to us about this role, here’s a little challenge: write a program that outputs the largest unique set of characters that can be removed from this paragraph without letting its length drop below 50.
+```
 
-### `npm start`
+# Initial Install
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This assumes basic familiarity with:
+* Command-line shell (ex. Apple's Terminal app)
+* An IDE (ex. Sublime Text, PhpStorm)
+* NPM
+* HTML, CSS, Javascript (React and Redux, specifically)
+* A webfont provider (ex. Adobe Fonts, Google Fonts)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+After downloading and unzipping the zip off GitHub, open your shell and cd over to the unzipped directory. In the root of the unzipped directory, simply run `npm install` to generate node_modules and grab all your dependencies.
 
-### `npm test`
+# Config Setup
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You're most of the way. Now we just have to configure the font file. From the root of this project folder go to the constants directory and change config-SAMPLE.js to config.js:
+`cd src/constants && mv config-SAMPLE.js config.js`
 
-### `npm run build`
+Now, if you have certain webfonts you want to use on your implementation, go to the webfont provider of your choice and build your font package. These providers typically give you a URL to put into the `<link rel="stylesheet">` tag. Copy that URL to your clipboard. warm up the IDE of your choice and open this config.js file. The file should be a simple JS object:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+export const config = {
+    fontURL: '',
+    fontFamily: ''
+}
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+A quick rundown of what these properties do:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## fontURL
+Controls where the app grabs its webfonts from. This is where you should paste your URL.
 
-### `npm run eject`
+## fontFamily
+A typical CSS-friendly comma-delimited font stack. (ex. `"Helvetica Neue", Helvetica, Arial, sans-serif'`)  Don't put the semi-colon at the end.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Testing, Building, Etc.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Now, you should be good to launch the app. All the typical React NPM commands apply:
+* `npm start` – Starts the app in dev mode
+* `npm test` – Starts the app in interactive watch mode
+* `npm run build`  – Generates an optimized production build for you to upload to your site and run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Have fun!
+-Nick
