@@ -66,7 +66,7 @@ class App extends React.Component {
           <p>
             This tool came about from a challenge posted in a Spotify job&nbsp;description: 
           </p>
-          <p className="quote">
+          <p className="quote display">
             If you want to jumpstart the process of talking to us about this role, here’s a little challenge: write a program that outputs the largest unique set of characters that can be removed from this paragraph without letting its length drop below&nbsp;50.
           </p>
         </div>

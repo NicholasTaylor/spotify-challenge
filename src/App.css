@@ -46,6 +46,10 @@ h2 {
   padding-left: 0.5em; 
 }
 
+h1, .display {
+  color: #1ED760;
+}
+
 .results {
   font-weight: 500;
   font-size: 1.25rem;
