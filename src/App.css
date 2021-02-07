@@ -3,34 +3,39 @@ html, body {
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: rgba(24, 24, 24, 1);
+  color: #b3b3b3;
+  background-repeat: no-repeat;
 }
 
 #content-container {
+  background: linear-gradient(rgba(63, 63, 63, 1), rgba(24, 24, 24, 1) 20%);
   position: relative;
 }
 
 #content {
-  width: 50vw;
-  position: absolute;
+  position: relative;
+  width: 70vw;
   left: 50vw;
   transform: translateX(-50%);
+  top: 20vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 textarea {
-  width: 40vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 90%;
   height: 16vh;
   font-size: 1rem;
   padding: 0.5em;
+  margin: 1.5em 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
 }
 
 h1 {
@@ -41,13 +46,9 @@ h2 {
   font-size: 2rem;
 }
 
-.display {
-  border-left: 1px white solid;
-  padding-left: 0.5em; 
-}
 
-h1, .display {
-  color: #1ED760;
+h1, .display, h1, h2, h3, h4, h5, h6 {
+  color: #fff;
 }
 
 .results {
@@ -64,21 +65,47 @@ h1, .display {
   word-break: break-all;
 }
 
+.panel {
+  width: 50%;
+  flex: 1 2 auto;
+}
+
 @media (max-width: 480px){
+  body {
+    background-color: rgba(17, 18, 17, 1);
+  }
+
+  body, .results, .quote {
+    font-size: .75rem;
+    line-height: 1;
+  }
+
+  .explainer {
+    font-size: 1rem;;
+  }
+
+  #content-container {
+    background: radial-gradient(circle at left top, rgba(60, 104, 170, 1) -30%, rgba(17, 18, 17, 1) 35%);
+  }
+
   #content {
-    width: 80vw;
-    text-align: center;
+    width: 90vw;
+    top: 7vh;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.25rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
-  textarea {
-    width: 70vw;
+  .panel {
+    width: 100%;
+    background-color: #262529;
+    border-radius: .25em;
+    padding: .5em;
+    margin: .25em 0;
   }
 }
