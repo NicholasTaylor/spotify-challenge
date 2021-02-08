@@ -7,20 +7,9 @@ This is a little React app I threw together in response to a task in a Spotify j
 If you want to jumpstart the process of talking to us about this role, here’s a little challenge: write a program that outputs the largest unique set of characters that can be removed from this paragraph without letting its length drop below 50.
 ```
 
-# Initial Install
-
-This assumes basic familiarity with:
-* Command-line shell (ex. Apple's Terminal app)
-* An IDE (ex. Sublime Text, PhpStorm)
-* NPM
-* HTML, CSS, Javascript (React and Redux, specifically)
-* A webfont provider (ex. Adobe Fonts, Google Fonts)
-
-After downloading and unzipping the zip off GitHub, open your shell and cd over to the unzipped directory. In the root of the unzipped directory, simply run `npm install` to generate node_modules and grab all your dependencies.
-
 # Config Setup
 
-You're most of the way. Now we just have to configure the font file. From the root of this project folder go to the constants directory and change config-SAMPLE.js to config.js:
+From the project root, go to the constants directory and change config-SAMPLE.js to config.js:
 `cd src/constants && mv config-SAMPLE.js config.js`
 
 Now, if you have certain webfonts you want to use on your implementation, go to the webfont provider of your choice and build your font package. These providers typically give you a URL to put into the `<link rel="stylesheet">` tag. Copy that URL to your clipboard. warm up the IDE of your choice and open this config.js file. The file should be a simple JS object:
